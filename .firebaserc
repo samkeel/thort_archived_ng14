@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "thort-6d8e3": {
+      "hosting": {
+        "thort": [
+          "thort-6d8e3"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "thort-6d8e3"
+  }
+}

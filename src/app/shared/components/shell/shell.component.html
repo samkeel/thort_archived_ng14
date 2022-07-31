@@ -1,0 +1,17 @@
+<app-header></app-header>
+
+<mat-sidenav-container class="sidenav-container content">
+  <mat-sidenav
+    #sidenav
+    [attr.role]="(ishandset$ | async) ? 'dialog' : 'navigation'"
+    [mode]="(ishandset$ | async) ? 'over' : 'side'"
+    [opened]="(ishandset$ | async) === false"
+  >
+    <app-side-nav></app-side-nav>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <!-- transclusion -->
+    <ng-content></ng-content>
+  </mat-sidenav-content>
+</mat-sidenav-container>

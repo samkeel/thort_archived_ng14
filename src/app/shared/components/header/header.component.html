@@ -1,0 +1,33 @@
+<mat-toolbar color="primary" class="toolbar">
+  <button
+    type="button"
+    aria-label="Toggle sidenav"
+    mat-icon-button
+    (click)="toggleNav()"
+  >
+    <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+  </button>
+
+  <section class="header-label">
+    <ng-container *ngIf="!(user.isLoggedIn$ | async); else siteText">
+      <h3 routerLink="/">Thort.info</h3>
+    </ng-container>
+
+    <ng-template #siteText>
+      <h3 routerLink="notes">Thort.info</h3>
+    </ng-template>
+  </section>
+
+  <span class="fill_space"></span>
+
+  <section>
+    <ng-container *ngIf="!(user.isLoggedIn$ | async); else signedIn">
+      <button mat-button routerLink="signin">Sign in</button>
+      <button mat-raised-button routerLink="signup">Sign up</button>
+    </ng-container>
+
+    <ng-template #signedIn>
+      <button mat-button (click)="onLogout()">Logout</button>
+    </ng-template>
+  </section>
+</mat-toolbar>

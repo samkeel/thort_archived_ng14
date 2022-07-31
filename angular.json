@@ -28,7 +28,12 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              {
+                "input": "src/styles/dark/dark-theme.scss",
+                "bundleName": "dark-theme",
+                "inject": false
+              }
             ],
             "scripts": []
           },
@@ -96,12 +101,30 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              {
+                "input": "src/styles/dark/dark-theme.scss",
+                "bundleName": "dark-theme",
+                "inject": false
+              }
             ],
             "scripts": []
+          }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "thort:build:production",
+            "firebaseProject": "thort-6d8e3",
+            "firebaseHostingSite": "thort-6d8e3"
           }
         }
       }
     }
+  },
+  "cli": {
+    "analytics": false
   }
 }
