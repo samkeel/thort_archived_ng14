@@ -22,7 +22,7 @@ export class HeaderComponent implements OnInit {
   }
 
   toggleNav(): void {
-    
+    this.sidenavService.toggle();
   }
 
   onLogout() {

@@ -1,6 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { MatSidenav } from '@angular/material/sidenav';
 import { Observable } from 'rxjs';
 import { BpObserverService } from '../../services/bp-observer.service';
+import { SideNavService } from '../../services/side-nav.service';
 import { UserService } from '../../services/user.service';
 
 @Component({
@@ -9,11 +11,17 @@ import { UserService } from '../../services/user.service';
   styleUrls: ['./shell.component.scss'],
 })
 export class ShellComponent implements OnInit {
+  @ViewChild('sidenav') public sidenav!: MatSidenav;
   ishandset$: Observable<boolean> = this.bpoService.Handset$;
   constructor(
     private bpoService: BpObserverService,
-    public user: UserService
+    public user: UserService,
+    private sidenavService: SideNavService,
   ) {}
 
   ngOnInit(): void {}
+
+  ngAfterViewInit(): void {
+    this.sidenavService.setSidenav(this.sidenav);
+  }
 }
