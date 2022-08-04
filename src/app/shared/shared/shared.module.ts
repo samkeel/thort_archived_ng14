@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HeaderComponent } from '../components/header/header.component';
 import { HomeComponent } from '../components/home/home.component';
@@ -31,6 +32,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatDividerModule } from '@angular/material/divider';
+import {MatDialogModule} from '@angular/material/dialog';
 import { RouterModule } from '@angular/router';
 import { PageNotFoundComponent } from '../components/page-not-found/page-not-found.component';
 
@@ -60,6 +62,7 @@ const matModules = [
   MatInputModule,
   MatFormFieldModule,
   ReactiveFormsModule,
+  FormsModule,
   MatCheckboxModule,
   MatStepperModule,
   MatDatepickerModule,
@@ -68,6 +71,7 @@ const matModules = [
   MatRadioModule,
   MatSlideToggleModule,
   MatDividerModule,
+  MatDialogModule
 ];
 
 @NgModule({
