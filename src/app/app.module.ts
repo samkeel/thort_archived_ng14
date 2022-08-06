@@ -11,6 +11,7 @@ import { provideFirestore, getFirestore } from '@angular/fire/firestore';
 import { SharedModule } from './shared/shared/shared.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { BpObserverService } from './shared/services/bp-observer.service';
 import { SnackbarService } from './shared/services/snackbar.service';
 import { SideNavService } from './shared/services/side-nav.service';
@@ -26,6 +27,7 @@ import { UserService } from './shared/services/user.service';
     SharedModule,
     FlexLayoutModule,
     AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule
   ],
   providers: [
     BpObserverService,
