@@ -35,6 +35,8 @@ import { MatDividerModule } from '@angular/material/divider';
 import {MatDialogModule} from '@angular/material/dialog';
 import { RouterModule } from '@angular/router';
 import { PageNotFoundComponent } from '../components/page-not-found/page-not-found.component';
+import {MatButtonToggleModule} from '@angular/material/button-toggle';
+
 
 const components = [
   HeaderComponent,
@@ -71,7 +73,8 @@ const matModules = [
   MatRadioModule,
   MatSlideToggleModule,
   MatDividerModule,
-  MatDialogModule
+  MatDialogModule,
+  MatButtonToggleModule
 ];
 
 @NgModule({

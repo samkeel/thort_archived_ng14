@@ -16,6 +16,7 @@ import { BpObserverService } from './shared/services/bp-observer.service';
 import { SnackbarService } from './shared/services/snackbar.service';
 import { SideNavService } from './shared/services/side-nav.service';
 import { UserService } from './shared/services/user.service';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { UserService } from './shared/services/user.service';
     SharedModule,
     FlexLayoutModule,
     AngularFireModule.initializeApp(environment.firebase),
-    AngularFirestoreModule
+    AngularFirestoreModule,
+    FormsModule
   ],
   providers: [
     BpObserverService,

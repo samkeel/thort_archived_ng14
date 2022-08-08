@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SiveNavComponent } from './sive-nav.component';
+import { BoardDialogComponent } from './board-dialog.component';
 
-describe('SiveNavComponent', () => {
-  let component: SiveNavComponent;
-  let fixture: ComponentFixture<SiveNavComponent>;
+describe('BoardDialogComponent', () => {
+  let component: BoardDialogComponent;
+  let fixture: ComponentFixture<BoardDialogComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ SiveNavComponent ]
+      declarations: [ BoardDialogComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(SiveNavComponent);
+    fixture = TestBed.createComponent(BoardDialogComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
