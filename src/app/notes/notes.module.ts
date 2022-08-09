@@ -8,9 +8,9 @@ import { SharedModule } from '../shared/shared/shared.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { BoardComponent } from './components/board/board.component';
 import { BoardListComponent } from './components/board-list/board-list.component';
-import { BoardDialogComponent } from './components/dialogs/board-dialog/board-dialog.component';
 import { FormsModule } from '@angular/forms';
 import { TaskDialogComponent } from './components/dialogs/task-dialog/task-dialog.component';
+import { BoardDialogComponent } from './components/dialogs/board-dialog/board-dialog.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +27,6 @@ import { TaskDialogComponent } from './components/dialogs/task-dialog/task-dialo
     SharedModule,
     FlexLayoutModule,
     FormsModule
-  ],
+  ]
 })
 export class NotesModule {}

@@ -2,7 +2,8 @@ import { Injectable } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { arrayRemove, Firestore, writeBatch } from '@angular/fire/firestore';
-import { switchMap } from 'rxjs';
+import * as firebase from 'firebase/compat';
+import { map, switchMap } from 'rxjs';
 import { Board, Task } from '../models/board-data.model';
 
 @Injectable({
@@ -60,6 +61,6 @@ export class BoardService {
 
   // batch write to change the priority of each board for sorting
   sortBoards(boards: Board[]) {
-    // TODO
+
   }
 }
