@@ -8,19 +8,37 @@
     ></textarea>
   </mat-form-field>
   <br />
-  <mat-button-toggle-group
-    #group="matButtonToggleGroup"
-    [(ngModel)]="data.task.label"
-  >
-    <mat-button-toggle *ngFor="let opt of labelOptions" [value]="opt">
-      <mat-icon [ngClass]="opt">{{
-        opt === "gray" ? "check_circle" : "lens"
-      }}</mat-icon>
-    </mat-button-toggle>
-  </mat-button-toggle-group>
+  <div fxLayout="row" fxLayoutAlign="center center">
+    <mat-button-toggle-group
+      #group="matButtonToggleGroup"
+      [(ngModel)]="data.task.label"
+    >
+      <mat-button-toggle *ngFor="let opt of labelOptions" [value]="opt">
+        <mat-icon [ngClass]="opt">{{
+          opt === "gray" ? "check_circle" : "lens"
+        }}</mat-icon>
+      </mat-button-toggle>
+    </mat-button-toggle-group>
+  </div>
 </div>
 <div mat-dialog-actions>
-  <button mat-button [mat-dialog-close]="data" cdkFocusInitial>
-    {{ data.isNew ? "Add Task" : "Update Task" }}
-  </button>
+
+    <button mat-button [mat-dialog-close]="data" cdkFocusInitial>
+      {{ data.isNew ? "Add Task" : "Update Task" }}
+    </button>
+
+    <span class="fill_space"></span>
+
+    <div *ngIf="data.isNew !== true">
+      <button
+        mat-button
+        [mat-dialog-close]="data"
+        (click)="handleTaskDelete()"
+        color="warn"
+        cdkFocusInitial
+      >
+        Delete
+      </button>
+    </div>
+
 </div>
