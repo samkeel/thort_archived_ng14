@@ -1,6 +1,7 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
-import { BoardService } from 'src/app/notes/services/board.service';
+import { BoardService } from 'src/app/kanban/services/board.service';
+
 
 @Component({
   selector: 'app-task-dialog',

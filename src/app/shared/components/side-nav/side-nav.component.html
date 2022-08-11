@@ -1,24 +1,21 @@
 <section>
   <ng-container *ngIf="!(user.isLoggedIn$ | async); else signedInNav">
     <button mat-button routerLink="signin">Sign in</button>
-    <br>
+    <br />
     <button mat-raised-button routerLink="signup">Sign up</button>
   </ng-container>
 
   <ng-template #signedInNav>
     <mat-list>
-        <mat-list-item >
-            <mat-icon matListIcon>view_kanban</mat-icon>
-            <h3 class="link" matLine routerLink="notes/kanban">Kanban</h3>
-        </mat-list-item>
-    
+      <mat-list-item>
+        <mat-icon matListIcon>view_kanban</mat-icon>
+        <h3 class="link" matLine routerLink="kanban">Kanban</h3>
+      </mat-list-item>
       <mat-divider></mat-divider>
-      <h3 matSubheader>Notes</h3>
-    
+      <mat-list-item>
+        <mat-icon matListIcon>notes</mat-icon>
+        <h3 class="link" matLine routerLink="notes">Notes</h3>
+      </mat-list-item>
     </mat-list>
-
   </ng-template>
-
 </section>
-
-

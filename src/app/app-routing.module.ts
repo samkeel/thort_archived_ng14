@@ -10,6 +10,15 @@ const routes: Routes = [
   { path: 'signin', component: SignInComponent },
   { path: 'signup', component: SignUpComponent },
   {
+    path: 'main',
+    loadChildren: () => import('./main/main.module').then((m) => m.MainModule),
+  },
+  {
+    path: 'kanban',
+    loadChildren: () =>
+      import('./kanban/kanban.module').then((m) => m.KanbanModule),
+  },
+  {
     path: 'notes',
     loadChildren: () =>
       import('./notes/notes.module').then((m) => m.NotesModule),
