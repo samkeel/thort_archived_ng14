@@ -1,9 +1,8 @@
 import { Injectable } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
-import { arrayRemove, Firestore, writeBatch } from '@angular/fire/firestore';
-import * as firebase from 'firebase/compat';
-import { map, switchMap } from 'rxjs';
+import { arrayRemove } from '@angular/fire/firestore';
+import { concatMap, map, switchMap } from 'rxjs';
 import { Board, Task } from '../models/board-data.model';
 
 @Injectable({
@@ -61,6 +60,9 @@ export class BoardService {
 
   // batch write to change the priority of each board for sorting
   sortBoards(boards: Board[]) {
-
+    const batch = this.db.firestore.batch();
+    const refs = boards.map(b => this.db.doc(`boards/${b.id}`).ref); // get
+    refs.forEach((ref, idx) => batch.update(ref, {priority: idx}) ); // write
+    batch.commit();
   }
 }
