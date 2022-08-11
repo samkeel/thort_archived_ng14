@@ -36,6 +36,7 @@ import {MatDialogModule} from '@angular/material/dialog';
 import { RouterModule } from '@angular/router';
 import { PageNotFoundComponent } from '../components/page-not-found/page-not-found.component';
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
+import { DeleteButtonComponent } from '../components/delete-button/delete-button.component';
 
 
 const components = [
@@ -45,7 +46,8 @@ const components = [
   SideNavComponent,
   SignInComponent,
   SignUpComponent,
-  PageNotFoundComponent
+  PageNotFoundComponent,
+  DeleteButtonComponent
 ];
 
 const matModules = [
