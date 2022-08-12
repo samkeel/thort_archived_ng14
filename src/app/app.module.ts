@@ -17,10 +17,11 @@ import { SnackbarService } from './shared/services/snackbar.service';
 import { SideNavService } from './shared/services/side-nav.service';
 import { UserService } from './shared/services/user.service';
 import { FormsModule } from '@angular/forms';
+import { TopOfPageComponent } from './shared/components/top-of-page/top-of-page.component';
 
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, TopOfPageComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
